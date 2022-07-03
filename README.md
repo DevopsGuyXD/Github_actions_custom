@@ -1,6 +1,6 @@
 # Github_actions_custom
 
-<h4>Usage:</h4><br>
+<h4>Usage:</h4>
 
     - name: Checkout
       uses: actions/checkout@master
