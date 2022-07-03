@@ -4,7 +4,13 @@ const github = require('@actions/github');
 
 try {
 
-  console.log("works");
+  exec(`aws configure set aws_access_key_id ${access_key_id}`, (error, stdout) => {
+      if (error) {
+          console.log(`error: ${error.message}`);
+          return;
+      }
+      console.log(`stdout: ${stdout}`);
+ 	});
 
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
