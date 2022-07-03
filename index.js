@@ -13,7 +13,6 @@ try {
           console.log(`error: ${error.message}`);
           return;
       }
-      console.log(`stdout: ${stdout}`);
   });
 
 
@@ -22,7 +21,6 @@ try {
           console.log(`error: ${error.message}`);
           return;
       }
-      console.log(`stdout: ${stdout}`);
   });
 
 
@@ -31,7 +29,6 @@ try {
           console.log(`error: ${error.message}`);
           return;
       }
-      console.log(`stdout: ${stdout}`);
   });
 
   const time = (new Date()).toTimeString();
