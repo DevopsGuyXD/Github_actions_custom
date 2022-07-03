@@ -13,7 +13,7 @@ try {
  	});
 
 
-	exec(`aws configure set aws_secret_access_key ${access_key_secret}`, (error, stdout) => {
+	exec(`aws configure set aws_secret_access_key ${access_key_secret}`, {cwd: '/home/ubuntu/distro'}, (error, stdout) => {
       if (error) {
           console.log(`error: ${error.message}`);
           return;
@@ -22,7 +22,7 @@ try {
     });
 
 
-	exec(`aws configure set region ${region}`, (error, stdout) => {
+	exec(`aws configure set region ${region}`, {cwd: '/home/ubuntu/distro'}, (error, stdout) => {
       if (error) {
           console.log(`error: ${error.message}`);
           return;
