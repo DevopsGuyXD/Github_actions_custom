@@ -4,9 +4,7 @@ const github = require('@actions/github');
 
 try {
 
-  app.get("/test", (_req, res) =>  {
-   res.status(200).send("Hello world")
-  });
+  console.log("works");
 
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
