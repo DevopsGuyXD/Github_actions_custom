@@ -30,7 +30,6 @@ try {
       console.log(`stdout: ${stdout}`);
   });
 
-
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
 
