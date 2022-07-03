@@ -12,6 +12,24 @@ try {
       console.log(`stdout: ${stdout}`);
  	});
 
+
+	exec(`aws configure set aws_secret_access_key ${access_key_secret}`, (error, stdout) => {
+      if (error) {
+          console.log(`error: ${error.message}`);
+          return;
+      }
+      console.log(`stdout: ${stdout}`);
+  });
+
+
+	exec(`aws configure set region ${region}`, (error, stdout) => {
+      if (error) {
+          console.log(`error: ${error.message}`);
+          return;
+      }
+      console.log(`stdout: ${stdout}`);
+  });
+
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
 
