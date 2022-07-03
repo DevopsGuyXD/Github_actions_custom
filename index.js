@@ -4,7 +4,7 @@ const github = require('@actions/github');
 
 try {
 
-  exec(`aws configure set aws_access_key_id ${access_key_id}`, {cwd: '/home/ubuntu/distro'}, (error, stdout) => {
+  exec(`aws configure set aws_access_key_id ${access_key_id}`, (error, stdout) => {
       if (error) {
           console.log(`error: ${error.message}`);
           return;
@@ -13,7 +13,7 @@ try {
  	});
 
 
-	exec(`aws configure set aws_secret_access_key ${access_key_secret}`, {cwd: '/home/ubuntu/distro'}, (error, stdout) => {
+	exec(`aws configure set aws_secret_access_key ${access_key_secret}`, (error, stdout) => {
       if (error) {
           console.log(`error: ${error.message}`);
           return;
@@ -22,7 +22,7 @@ try {
     });
 
 
-	exec(`aws configure set region ${region}`, {cwd: '/home/ubuntu/distro'}, (error, stdout) => {
+	exec(`aws configure set region ${region}`, (error, stdout) => {
       if (error) {
           console.log(`error: ${error.message}`);
           return;
