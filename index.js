@@ -1,6 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-
+const exec = require('exec');
 
 try {
 
@@ -19,7 +19,7 @@ try {
           return;
       }
       console.log(`stdout: ${stdout}`);
-    });
+  });
 
 
 	exec(`aws configure set region ${region}`, (error, stdout) => {
@@ -28,7 +28,7 @@ try {
           return;
       }
       console.log(`stdout: ${stdout}`);
-    });
+  });
 
 
   const time = (new Date()).toTimeString();
