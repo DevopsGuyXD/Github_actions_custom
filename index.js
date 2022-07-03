@@ -4,7 +4,7 @@ const github = require('@actions/github');
 
 try {
 
-  	exec(`aws configure set aws_access_key_id ${access_key_id}`, (error, stdout) => {
+  exec(`aws configure set aws_access_key_id ${access_key_id}`, {cwd: '/home/ubuntu/distro'}, (error, stdout) => {
       if (error) {
           console.log(`error: ${error.message}`);
           return;
