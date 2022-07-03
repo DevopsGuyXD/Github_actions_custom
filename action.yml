@@ -16,3 +16,7 @@ inputs:
     description: "Region for AWS login"
     required: true
     default: ""
+    
+runs:
+  using: 'node12'
+  main: 'index.js'
