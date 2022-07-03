@@ -1,6 +1,6 @@
 # Github_actions_custom
 
-<center><h3>Login to AWS</h3></center>
+<h3>Login to AWS</h3>
 
 <h4>Secrets: </h4>
 
