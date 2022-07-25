@@ -16,6 +16,11 @@ inputs:
     description: "Region for AWS login"
     required: true
     default: ""
+
+  docker_image_name:
+    description: "Name for the docker image"
+    required: true
+    default: ""
     
 runs:
   using: 'node12'

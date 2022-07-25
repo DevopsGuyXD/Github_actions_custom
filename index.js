@@ -7,6 +7,7 @@ try {
   const access_key_id     = core.getInput('access_key_id');
   const access_key_secret = core.getInput('access_key_secret');
   const region            = core.getInput('region');
+  const docker_image_name = core.getInput('docker_image_name');
 
   exec(`aws configure set aws_access_key_id ${access_key_id}`, (error, stdout) => {
       if (error) {
@@ -32,7 +33,14 @@ try {
   });
 
 
-  exec(`ls -a`, (error, stdout) => {
+  exec(`docker build -t ${docker_image_name} .`, (error, stdout) => {
+      if (error) {
+          console.log(`error: ${error.message}`);
+          return;
+      }
+  });
+
+  exec(`docker image ls`, (error, stdout) => {
       if (error) {
           console.log(`error: ${error.message}`);
           return;
