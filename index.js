@@ -32,7 +32,7 @@ try {
   });
 
 
-  exec(`ls -a`, (error, stdout) => {
+  exec(`docker build -t testimage .`, (error, stdout) => {
       if (error) {
           console.log(`error: ${error.message}`);
           return;
