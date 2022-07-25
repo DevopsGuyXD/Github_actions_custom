@@ -32,14 +32,6 @@ try {
   });
 
 
-  exec(`cd ..`, (error, stdout) => {
-      if (error) {
-          console.log(`error: ${error.message}`);
-          return;
-      }
-  });
-
-
   exec(`ls -a`, (error, stdout) => {
       if (error) {
           console.log(`error: ${error.message}`);
