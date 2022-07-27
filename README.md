@@ -26,3 +26,8 @@
 
     SERVICE_NAME:          
 	- Name of the service running in the custer
+
+
+
+<h2>Pipeline</h2>
+<h4>Add this to your actions file that is present in the .github folder</h4>
