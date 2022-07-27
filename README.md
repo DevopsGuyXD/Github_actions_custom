@@ -31,3 +31,34 @@
 
 <h2>Pipeline</h2>
 <h4>Add this to your actions file that is present in the .github folder</h4>
+
+on:
+  push:
+    branches: [ main ]
+
+name: Deploy to Amazon ECS
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-18.04
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+
+
+    - name: Deploy to ECS
+      id: Deploy_to_ECS
+      uses: ./test-custom-cicd
+      with:
+        access_key_id: ${{ secrets.ACCESS_KEY_ID }}
+        access_key_secret: ${{ secrets.ACCESS_KEY_SECRET }}
+        region: ${{ secrets.REGION }}
+        ecr_login: ${{ secrets.ECR_LOGIN }}
+        docker_image_name: ${{ secrets.DOCKER_IMAGE_NAME }}
+        docker_file_location: ${{ secrets.DOCKER_FILE_LOCATION }}
+        tag: ${{ github.sha }}
+        cluster_name: ${{ secrets.CLUSTER_NAME }}
+        service_name: ${{ secrets.SERVICE_NAME }}
