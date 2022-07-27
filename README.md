@@ -32,7 +32,7 @@
 
 
 
-<h2>Pipeline</h2>
+<h2>Pipeline:</h2>
 <h4>Add this to your actions file that is present in the .github folder</h4>
 
     on:
