@@ -1,6 +1,6 @@
 # Deploy to AWS ECS
 
-<h2>Secret:</h2>
+<h2>Secrets:</h2>
 <p>Create these secrets in your github projects repository</p>
 
     ACCESS_KEY_ID: AWS access key
