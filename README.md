@@ -34,11 +34,11 @@
 
 <br>
 <h2>Pipeline:</h2>
-<h4>2. Add this to your actions file that is present in the .github folder</h4>
+<h4>2. Create a folder named ".github" at the root level of your project, Create a file with the name "deploy_to_ecs.yml" and add the below contents to it while setting the branch value as well</h4>
 
     on:
       push:
-        branches: [ main ]
+        branches: [ Enter the branch from which your code needs to get deployed ]
 
     name: Deploy to Amazon ECS
 
