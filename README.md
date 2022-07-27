@@ -1,6 +1,6 @@
 # Deploy to AWS ECS
 
-<h4>Secrets: </h4>
+<h2>Secrets: </h3>
 
     ACCESS_KEY_ID: AWS access key
 
