@@ -1,4 +1,4 @@
-<center>#Deploy to AWS ECS</center>
+# Deploy to AWS ECS
 
 <h2>Secrets: </h3>
 
