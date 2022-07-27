@@ -2,7 +2,7 @@
 
 <br>
 <h2>Secrets:</h2>
-<h4>- Create these secrets in your github projects repository</h4>
+<h4>1. Create these secrets in your github projects repository</h4>
 
     ACTION:
   	- Add this value "git clone -b ecs https://github.com/DevopsGuyXD/Github_actions_custom.git"
@@ -34,7 +34,7 @@
 
 <br>
 <h2>Pipeline:</h2>
-<h4>- Add this to your actions file that is present in the .github folder</h4>
+<h4>2. Add this to your actions file that is present in the .github folder</h4>
 
     on:
       push:
