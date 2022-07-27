@@ -17,8 +17,33 @@ inputs:
     required: true
     default: ""
 
+  ecr_login:
+    description: "ECR login command"
+    required: true
+    default: ""
+
   docker_image_name:
-    description: "Name for the docker image"
+    description: "Name for your docker image"
+    required: true
+    default: ""
+
+  docker_file_location:
+    description: "Location where your dockerfile is present"
+    required: true
+    default: ""
+
+  tag:
+    description: "Tag for your docker  image"
+    required: true
+    default: ""
+
+  cluster_name:
+    description: "Name of the ECS cluster"
+    required: true
+    default: ""
+
+  service_name:
+    description: "Name of the service running in the ECS cluster"
     required: true
     default: ""
     
