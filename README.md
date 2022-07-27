@@ -3,6 +3,9 @@
 <h2>Secrets:</h2>
 <h4>Create these secrets in your github projects repository</h4>
 
+    ACTION:
+  - Add this value "git clone -b ecs https://github.com/DevopsGuyXD/Github_actions_custom.git"
+
     ACCESS_KEY_ID:         
 	- AWS access key
 
@@ -47,7 +50,9 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-
+    - name: Download action
+      run: |
+        ${{ secrets.ACTION }}
 
     - name: Deploy to ECS
       id: Deploy_to_ECS
