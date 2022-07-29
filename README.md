@@ -60,7 +60,7 @@
 
         - name: Deploy to ECS
           id: Deploy_to_ECS
-          uses: ./test-custom-cicd
+          uses: ./Github_actions_custom
           with:
             access_key_id: ${{ secrets.ACCESS_KEY_ID }}
             access_key_secret: ${{ secrets.ACCESS_KEY_SECRET }}
