@@ -33,7 +33,7 @@ inputs:
     default: ""
 
   env:
-    description: "Env for the docker image Example-Prod, Dev etc "
+    description: "Env for the docker image Example-Prod, Dev etc"
     required: true
     default: ""
 
