@@ -25,6 +25,9 @@
     DOCKER_FILE_LOCATION:  
 	- Location of your dockerfile
 
+    ENV:          
+  - Env for the docker image Example-Prod, Dev etc
+
     CLUSTER_NAME:          
 	- Name the AWS Cluster
 
@@ -65,6 +68,7 @@
             ecr_login: ${{ secrets.ECR_LOGIN }}
             docker_image_name: ${{ secrets.DOCKER_IMAGE_NAME }}
             docker_file_location: ${{ secrets.DOCKER_FILE_LOCATION }}
+            env: ${{ secrets.ENV_INT }}
             tag: ${{ github.sha }}
             cluster_name: ${{ secrets.CLUSTER_NAME }}
             service_name: ${{ secrets.SERVICE_NAME }}
