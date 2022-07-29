@@ -10,6 +10,7 @@ try {
   const ecr_login            = core.getInput('ecr_login');
   const docker_image_name    = core.getInput('docker_image_name');
   const docker_file_location = core.getInput('docker_file_location');
+  const env                  = core.getInput('env');
   const tag                  = core.getInput('tag');
   const cluster_name         = core.getInput('cluster_name');
   const service_name         = core.getInput('service_name');
@@ -18,8 +19,8 @@ try {
         aws configure set aws_secret_access_key ${access_key_secret};
         aws configure set region ${region};
         ${ecr_login};
-        docker build -t ${docker_image_name}:latest .;
-        docker build -t ${docker_image_name}:v.${tag.substring(0,8)} .;
+        docker build -t ${docker_image_name}:latest . --build-arg env=${env};
+        docker build -t ${docker_image_name}:v.${tag.substring(0,8)} . --build-arg env=${env};
         docker push ${docker_image_name}:latest;
         docker push ${docker_image_name}:v.${tag.substring(0,8)};
         aws ecs update-service --cluster ${cluster_name} --service ${service_name} --force-new-deployment`, (error, stdout) => {

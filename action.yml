@@ -32,6 +32,11 @@ inputs:
     required: true
     default: ""
 
+  env:
+    description: "Env for the docker image Example-Prod, Dev etc "
+    required: true
+    default: ""
+
   tag:
     description: "Tag for your docker  image"
     required: true
