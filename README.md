@@ -25,7 +25,7 @@
     DOCKER_FILE_LOCATION:  
 	- Location of your dockerfile
 
-    ENV
+    ENV:
 	- Env for the docker image Example-Prod, Dev etc
 
     CLUSTER_NAME:          
