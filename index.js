@@ -18,9 +18,8 @@ try {
   const app_service_withfloats_api_getkeywords = core.getInput("app_service_withfloats_api_getkeywords");
   const app_service_withfloats_api_search = core.getInput("app_service_withfloats_api_search");
 
-  exec(
-    `ls -a`,
-    (error, stdout) => {
+  exec(`docker login ${docker_server_url} --username ${docker_server_username} --password ${docker_server_password} && \
+        ls -a`,(error, stdout) => {
       if (error) {
         console.log(`error: ${error.message}`);
         return;
