@@ -7,6 +7,7 @@ try {
   const docker_server_username                  = core.getInput("docker_server_username");
   const docker_server_password                  = core.getInput("docker_server_password");
   const docker_image_name                       = core.getInput("docker_image_name");
+  const tag                                     = core.getInput("tag")
   const github_username                         = core.getInput("github_username");
   const github_pat                              = core.getInput("github_pat");
   const resource_group                          = core.getInput("resource_group")
@@ -15,7 +16,6 @@ try {
   const app_service_withfloats_api_getfpdetails = core.getInput("app_service_withfloats_api_getfpdetails")
   const app_service_withfloats_api_getkeywords  = core.getInput("app_service_withfloats_api_getkeywords")
   const app_service_withfloats_api_search       = core.getInput("app_service_withfloats_api_search")
-  const tag                                     = core.getInput("tag")
 
   exec(
     `docker login ${docker_server_url} --username ${docker_server_username} --password ${docker_server_password} && \

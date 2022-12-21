@@ -20,6 +20,11 @@ inputs:
     description: "Docker image name"
     required: true
     default: ""
+    
+  tag:
+    description: "Tag"
+    required: true
+    default: ""
 
   github_username:
     description: "Github username"
@@ -58,11 +63,6 @@ inputs:
 
   app_service_withfloats_api_search:
     description: "Azure App Service Withfloats-api"
-    required: true
-    default: ""
-
-  tag:
-    description: "Tag"
     required: true
     default: ""
 
