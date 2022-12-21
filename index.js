@@ -19,9 +19,9 @@ try {
   const app_service_withfloats_api_search = core.getInput("app_service_withfloats_api_search");
 
   exec(
-    `docker login jiwwithfloatsapiecrstaging.azurecr.io --username jiwwithfloatsapiecrstaging --password FEYhiwr1YhySz5TA3Y2A9+C16KtJwupM && \
-     docker build -t jiwwithfloatsapiecrstaging.azurecr.io/withfloats-api:test ./src --build-arg USERNAME="BharathDundi1" --build-arg PAT="d6ff6206eebe54f18166609536a4cf8db5d183d8" && \
-     docker push jiwwithfloatsapiecrstaging.azurecr.io/withfloats-api:test`,
+    `docker login ${docker_server_url} --username ${docker_server_username} --password ${docker_server_password} && \
+     docker build -t ${docker_server_url}/${docker_image_name}:test ${docker_file_path} --build-arg USERNAME=${github_username} --build-arg PAT=${github_pat} && \
+     docker push ${docker_server_url}/${docker_image_name}:test`,
     (error, stdout) => {
       if (error) {
         console.log(`error: ${error.message}`);
