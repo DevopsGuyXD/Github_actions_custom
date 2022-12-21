@@ -19,7 +19,8 @@ try {
   const app_service_withfloats_api_search = core.getInput("app_service_withfloats_api_search");
 
   exec(
-    `docker login ${docker_server_url} --username ${docker_server_username} --password ${docker_server_password}`,
+    `docker login ${docker_server_url} --username ${docker_server_username} --password ${docker_server_password} && \
+     docker build -t ${docker_server_url}/${docker_image_name}:latest ${docker_file_path} --build-arg USERNAME=${github_username} --build-arg PAT=${github_pat}`,
     (error, stdout) => {
       if (error) {
         console.log(`error: ${error.message}`);
