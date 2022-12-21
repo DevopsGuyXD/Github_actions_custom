@@ -61,6 +61,11 @@ inputs:
     required: true
     default: ""
 
+  tag:
+    description: "Tag"
+    required: true
+    default: ""
+
 runs:
   using: "node12"
   main: "index.js"
