@@ -20,7 +20,7 @@ try {
 
   exec(`docker login ${docker_server_url} --username ${docker_server_username} --password ${docker_server_password} && \
         cd ./src && \
-        ls -a`,(error, stdout) => {
+        docker build -t ${docker_server_url}/${docker_image_name}:latest . --build-arg USERNAME=${github_username} --build-arg PAT=${github_pat}`,(error, stdout) => {
       if (error) {
         console.log(`error: ${error.message}`);
         return;
