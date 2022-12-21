@@ -19,6 +19,7 @@ try {
   const app_service_withfloats_api_search = core.getInput("app_service_withfloats_api_search");
 
   exec(`docker login ${docker_server_url} --username ${docker_server_username} --password ${docker_server_password} && \
+        cd ./src && \
         ls -a`,(error, stdout) => {
       if (error) {
         console.log(`error: ${error.message}`);
