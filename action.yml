@@ -6,6 +6,11 @@ inputs:
     required: true
     default: ""
 
+  docker_file_path:
+    description: "Docker file path"
+    required: true
+    default: ""
+
   docker_server_username:
     description: "Docker login username"
     required: true
@@ -20,7 +25,7 @@ inputs:
     description: "Docker image name"
     required: true
     default: ""
-    
+
   tag:
     description: "Tag"
     required: true
